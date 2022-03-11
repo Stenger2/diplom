@@ -55,18 +55,18 @@
   <ul>
     {{#each cards}}
     <li class="card__applications">
-      <form action="/delete" method="post">
-        <label>
-          <span>{{Name}}</span>
-          <span>{{Phone}}</span>
-          <span>{{TypeOfCard}}</span>
+      <label>
+        <span>{{Name}}</span>
+        <span>{{Phone}}</span>
+        <span>{{TypeOfCard}}</span>
 
+
+        <a href="tel:{{Phone}}" class="btn btn-small">Связаться</a>
+        <form action="/delete" method="post">
           <input type="hidden" value="{{_id}}" name="id">
-
-          <a href="tel:{{Phone}}" class="btn btn-small">Связаться</a>
           <button type="submit" class="btn btn-small">Просмотренно</button>
-        </label>
-      </form>
+        </form>
+      </label>
     </li>
     {{/each}}
   </ul>
